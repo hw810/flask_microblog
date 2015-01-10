@@ -1,0 +1,103 @@
+ This is notes for a flask tutorial project named 'microblog'
+
+* class in model doesn't define the constructor, but object can be instansised by pass the value of member
+
+it seems that parent constructor can be passed to sub-class
+
+* library installed
+
+- flask
+- flask-login
+- flask-openid
+- flask-mail
+- flask-sqlalchemy
+- sqlalchemy-migrate
+- flask-whooshalchemy
+- flask-wtf
+- flask-babel
+- guess_language
+- flipoflop
+- coverage
+
+* g global
+The g global is setup by Flask as a place to store and share data during the life of a request.
+* session (not db.session)
+We've seen that the flask.g object stores and shares data though the life of a request. The flask.session provides a much more complex service along those lines. Once data is stored in the session object it will be available during that request and any future requests made by the same client. Data remains in the session until explicitly removed. To be able to do this, Flask keeps a different session container for each client of our application.
+
+* test account
+- google
+  mrhd.test@gmail.com
+  n****
+- yahoo
+  mrhd.test@yahoo.com
+  n****
+- yahoo
+  mrhd.test_1@yahoo.com
+  n****
+
+* database change 
+Every time we modify the database we have to generate a new migration. Remember that in the database chapter we went through the pain of setting up a database migration system. We can see the fruits of that effort now. To add these two new fields to our database we just do this:
+
+./db_migrate.py
+
+* view function should be simple
+As a matter of principle, it is always best to move the logic of our application away from view functions and into models, because that simplifies the testing. You want to have your view functions be as simple as possible, because those are harder to test in an automated way.
+
+* trigger the query and query object
+Note the usage of the followed_posts() method. This method returns a query object, not the results. This is similar to how relationships with lazy = 'dynamic' work. It is always a good idea to return query objects instead of results, because that gives the caller the choice of adding more clauses to the query before it is executed.
+
+There are several methods in the query object that trigger the query execution. We've seen that count() runs the query and returns the number of results (throwing the actual results away). We have also used first() to return the first result and throw away the rest, if any. In this test we are using the all() method to get an array with all the results.
+
+The methods that trigers the query execution are:
+- count()
+- first()
+_ all()
+* trick to avoid submitting the same post request twice
+One final comment before we continue. Notice how after we insert a new Post into the detabase we do this:
+
+return redirect(url_for('index'))
+
+We could have easily skipped the redirect and allowed the function to continue down into the template rendering part, and it would have been more efficient. Because really, all the redirect does is return to this same view function to do that, after an extra trip to the client web browser.
+
+So, why the redirect? Consider what happens after the user writes a blog post, submits it and then hits the browser's refresh key. What will the refresh command do? Browsers resend the last issued request as a result of a refresh command.
+
+Without the redirect, the last request is the POST request that submitted the form, so a refresh action will resubmit the form, causing a second Post record that is identical to the first to be written to the database. Not good.
+
+By having the redirect, we force the browser to issue another request after the form submission, the one that grabs the redirected page. This is a simple GET request, so a refresh action will now repeat the GET request instead of submitting the form again.
+
+This simple trick avoids inserting duplicate posts when a user inadvertently refreshes the page after submitting a blog post.
+* make robust app
+Note how easy these changes are, and how little code is affected each time we make a change. 
+We are trying to write each part of the application /without making any assumptions/ regarding how the other parts work, and this enables us to write modular and robust applications that are easier to test and are less likely to fail or have bugs.
+* paginate
+Flask-SQLAlchemy comes with very good support for pagination. If for example, we wanted to get the first three followed posts of some user we can do this:
+
+    posts = g.user.followed_posts().paginate(1, 3, False).items
+
+The paginate method can be called on any query object. It takes three arguments:
+
+the page number, starting from 1,
+the number of items per page,
+an error flag. If True, when an out of range page is requested a 404 error will be automatically returned to the client web browser. If False, an empty list will be returned instead of an error.
+
+* pagination object
+method paginate return the pageination object with the following userful attributes:
+
+has_next: True if there is at least one more page after the current one
+has_prev: True if there is at least one more page before the current one
+next_num: page number for the next page
+prev_num: page number for the previous page
+
+* set credential info into enrironment vairable
+Note that the username and password are read from environment variables. You will need to set MAIL_USERNAME and MAIL_PASSWORD to your Gmail login credentials. Putting sensitive information in environment variables is safer than writing down the information on a source file.
+
+set environment variable
+
+os.environ['var name'] = 123
+
+* thread vs process
+
+when deal with sending emails, we are using thread atm 
+
+Just as an exercise, let's consider how this solution would look using processes instead of threads. We do not want a new process started for each email that we need to send, so instead we could use the Pool class from the multiprocessing module. This class creates a specified number of processes (which are forks of the main process) and all those processes wait to receive jobs to run, given to the pool via the apply_async method. This could be an interesting approach for a busy site, but we will stay with the threads for now.
+

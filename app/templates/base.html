@@ -1,0 +1,30 @@
+<html>
+    <head lang="en">
+    {% if title %}
+    <title>{{ title }} - microblog</title>
+    {% else %}
+    <title>Welcome to microblog</title>
+    {% endif %}
+    </head>
+    <body>
+        <div>Microblog:
+            <a href="/index">Home</a>
+            {% if g.user.is_authenticated() %}
+                | <a href="{{ url_for('user', nickname=g.user.nickname) }}">Profile</a>
+                | <form style="display: inline;" action="{{ url_for('search') }}" method="post" name="search">{{ g.search_form.hidden_tag() }}{{ g.search_form.search(size=20) }}</form>
+                | <a href="{{ url_for('logout') }}">Logout</a>
+            {% endif %}
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ur>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ur>
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </body>
+</html>
