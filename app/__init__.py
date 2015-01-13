@@ -44,3 +44,6 @@ if not app.debug:
     app.logger.addHandler(file_handler)
     app.logger.info('microblog startup')
 
+from momentjs import MomentJS
+app.jinja_env.globals['momentjs'] = MomentJS
+
