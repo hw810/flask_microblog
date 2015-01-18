@@ -3,6 +3,7 @@ __author__ = 'hd'
 from app import db, app
 from hashlib import md5
 import sys
+import re
 
 if sys.version_info >= (3, 0):
     enable_search = False
@@ -84,6 +85,10 @@ class User(db.Model):
 
     def sorted_posts(self):
         return self.posts.order_by(Post.timestamp.desc())
+
+    @staticmethod
+    def make_valid_nickname(nickname):
+        return re.sub('[^a-zA-Z0-9_\.]', '', nickname)
 
 
 class Post(db.Model):

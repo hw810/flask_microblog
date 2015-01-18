@@ -1,11 +1,13 @@
 from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user, current_user, login_required
-from app import app, db, lm, oid
+from flask.ext.babel import gettext
+from app import app, db, lm, oid, babel
 from .forms import LoginForm, EditForm, PostForm, SearchForm
 from models import User, Post
 import datetime as dt
-from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS
+from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS, LANGUAGES
 from emails import follower_notification
+
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
@@ -19,7 +21,7 @@ def index(page=1):
         post = Post(body=form.post.data, timestamp=dt.datetime.utcnow(), author=g.user)
         db.session.add(post)
         db.session.commit()
-        flash('Your post is now live!')
+        flash(gettext('Your post is now live!'))
         return redirect(url_for('index'))
 
     posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)
@@ -43,7 +45,7 @@ def before_request():
         db.session.add(g.user)
         db.session.commit()
         g.search_form = SearchForm()
-
+    g.locale = get_locale()
 
 @app.route('/login', methods=['GET', 'POST'])
 @oid.loginhandler
@@ -63,7 +65,7 @@ def login():
 @oid.after_login
 def after_login(resp):
     if resp.email is None or resp.email == "":
-        flash('Invalid login. Please try again.')
+        flash(gettext('Invalid login. Please try again.'))
         return redirect(url_for('login'))
     user = User.query.filter_by(email=resp.email).first()
     # if user is not in the databse, add it
@@ -71,6 +73,7 @@ def after_login(resp):
         nickname = resp.nickname
         if nickname is None or nickname == "":
             nickname = resp.email.split('@')[0]
+        nickname = User.make_valid_nickname((nickname))
         nickname = User.make_unique_nickname(nickname)
         user = User(nickname=nickname, email=resp.email)
         db.session.add(user)
@@ -97,7 +100,7 @@ def logout():
 def user(nickname, page=1):
     user = User.query.filter_by(nickname=nickname).first()
     if user is None:
-        flash('User {0} not found'.format(nickname))
+        flash(gettext('User %(nickname)s not found', nickname=nickname))
         return redirect(url_for('index'))
     posts = user.sorted_posts().paginate(page, POSTS_PER_PAGE, False)
     return render_template('user.html',
@@ -114,7 +117,7 @@ def edit():
         g.user.about_me = form.about_me.data
         db.session.add(g.user)
         db.session.commit()
-        flash('Your changes has been saved.')
+        flash(gettext('Your changes has been saved.'))
         return redirect(url_for('edit'))
     else:
         form.nickname.data = g.user.nickname
@@ -141,15 +144,15 @@ def follow(nickname):
         flash('User {0} not found.'.format(nickname))
         return redirect(url_for('index'))
     if user == g.user:
-        flash('You can\'t follow yourself!')
+        flash(gettext('You can\'t follow yourself!'))
         return redirect(url_for('user', nickname=nickname))
     u = g.user.follow(user)
     if u is None:
-        flash('Cannot follow ' + nickname + '.')
+        flash(gettext('Cannot follow %(nickname)s.', nickname=nickname))
         return redirect(url_for('user', nickname=nickname))
     db.session.add(u)
     db.session.commit()
-    flash('You are now following ' + nickname + '!')
+    flash(gettext('You are now following %(nickname)s!', nickname=nickname))
     follower_notification(user, g.user)
     return redirect(url_for('user', nickname=nickname))
 
@@ -159,18 +162,18 @@ def follow(nickname):
 def unfollow(nickname):
     user = User.query.filter_by(nickname=nickname).first()
     if user is None:
-        flash('User {0} not found'.format(nickname))
+        flash(gettext('User %(nickname)s not found', nickname=nickname))
         return redirect(url_for('index'))
     if user == g.user:
-        flash('You can\'t unfollow yourself.')
+        flash(gettext('You can\'t unfollow yourself.'))
         return redirect(url_for('user', nickname=nickname))
     u = g.user.unfollow(user)
     if u is None:
-        flash('Cannot unfollow ' + nickname + '.')
+        flash(gettext('Cannot unfollow %(nickname)s.', nickname=nickname))
         return redirect(url_for('user', nickname=nickname))
     db.session.add(u)
     db.session.commit()
-    flash('You have unfollowed ' + nickname + '!')
+    flash(gettext('You have unfollowed %(nickname)s', nickname=nickname))
     return redirect(url_for('user', nickname=nickname))
 
 
@@ -189,3 +192,13 @@ def search_results(query):
     return render_template('search_results.html',
                            query=query,
                            results=results)
+
+
+@babel.localeselector
+def get_locale():
+    #return request.accept_languages.best_match(LANGUAGES.keys())
+    str_locale = request.accept_languages.best_match(LANGUAGES.keys())
+    if str_locale == 'zh_CN':
+        str_locale = 'zh_Hans'
+    return str_locale
+    # return 'zh_Hans'

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 __author__ = 'huaidong'
 
 WTF_CSRF_ENABLED = True  # cross-site request forgery
@@ -38,5 +40,14 @@ POSTS_PER_PAGE = 3
 WHOOSE_BASE = os.path.join(basedir, 'search.db')
 
 MAX_SEARCH_RESULTS = 50
+
+
+# available languages
+LANGUAGES = {
+    'en': 'English',
+    'en_US': 'English (United States)',
+    'zh_Hans': '简体中文',
+    'zh_CN': '中文大陆'
+}
 
 

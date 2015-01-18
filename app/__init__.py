@@ -3,6 +3,7 @@ from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.login import LoginManager
 from flask.ext.openid import OpenID
+from flask.ext.babel import Babel, lazy_gettext
 from config import basedir, ADMINS, MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD
 
 
@@ -17,6 +18,8 @@ lm.init_app(app)
 oid = OpenID(app, os.path.join(basedir, 'tmp'))
 lm.login_view = 'login'  # if client attempt to access the login_required page it
                          # would be redirected to the view provided here.
+lm.login_message = lazy_gettext('Please log in to access this page.')
+babel = Babel(app)
 
 from flask.ext.mail import Mail
 mail = Mail(app)
@@ -47,3 +50,19 @@ if not app.debug:
 from momentjs import MomentJS
 app.jinja_env.globals['momentjs'] = MomentJS
 
+from flask.json import JSONEncoder
+
+
+class CustomJSONEncoder(JSONEncoder):
+    """This class adds support for lazy translation texts to Flask's
+    JSON encoder. This is necessary when flashing translated texts."""
+    def default(self, obj):
+        from speaklater import is_lazy_string
+        if is_lazy_string(obj):
+            try:
+                return unicode(obj)  # python 2
+            except NameError:
+                return str(obj)  # python 3
+        return super(CustomJSONEncoder, self).default(obj)
+
+app.json_encoder = CustomJSONEncoder
