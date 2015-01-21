@@ -18,6 +18,25 @@
         <script src="/static/js/moment-{{ g.locale }}.min.js"></script>
         {% endif %}
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+        function translate(source_lang, dest_lang, source_id, dest_id, loading_id) {
+            $(dest_id).hide();
+            $(loading_id).show();
+            $.post('/translate', {
+                text: $(source_id).text(),
+                source_lang: source_lang,
+                dest_lang: dest_lang
+            }).done(function (translated) {
+                $(dest_id).text(translated['text']);
+                $(loading_id).hide();
+                $(dest_id).show();
+            }).fail(function(){
+                $(dest_id).text("{{ _('Error: Could not contact server.') }}");
+                $(loading_id).hide();
+                $(dest_id).show();
+            });
+        }
+        </script>
     </head>
     <body>
         <div class="container">

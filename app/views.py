@@ -7,6 +7,9 @@ from models import User, Post
 import datetime as dt
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS, LANGUAGES
 from emails import follower_notification
+from guess_language import guessLanguage
+from flask import jsonify
+from translate import microsoft_translate
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -18,7 +21,13 @@ def index(page=1):
     user = g.user
     form = PostForm()
     if form.validate_on_submit():
-        post = Post(body=form.post.data, timestamp=dt.datetime.utcnow(), author=g.user)
+        language = guessLanguage(form.post.data)
+        if language == 'UNKNOWN':  # or len(language) > 5:
+            language = ''
+        post = Post(body=form.post.data,
+                    timestamp=dt.datetime.utcnow(),
+                    author=g.user,
+                    language=language)
         db.session.add(post)
         db.session.commit()
         flash(gettext('Your post is now live!'))
@@ -202,3 +211,15 @@ def get_locale():
         str_locale = 'zh_Hans'
     return str_locale
     # return 'zh_Hans'
+
+
+@app.route('/translate', methods=['POST'])
+@login_required
+def translate():
+    print request.form['source_lang']
+    print request.form['dest_lang']
+    return jsonify({
+        'text': microsoft_translate(
+            request.form['text'],
+            request.form['source_lang'],
+            request.form['dest_lang']) })

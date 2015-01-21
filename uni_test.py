@@ -1,10 +1,13 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os
 import unittest
 from datetime import datetime, timedelta
 from config import basedir
 from app import app, db
 from app.models import User, Post
+from app import translate
 
 
 class TestCase(unittest.TestCase):
@@ -113,6 +116,11 @@ class TestCase(unittest.TestCase):
         assert f2 == [p3, p2]
         assert f3 == [p4, p3]
         assert f4 == [p4]
+
+    def test_ms_translator(self):
+        t = translate.microsoft_translate(u'你好', 'zh', 'en')
+        print t
+        assert t == u'How are you doing'
 
 if __name__ == '__main__':
     unittest.main()

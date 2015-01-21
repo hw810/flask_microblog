@@ -45,9 +45,12 @@ MAX_SEARCH_RESULTS = 50
 # available languages
 LANGUAGES = {
     'en': 'English',
-    'en_US': 'English (United States)',
     'zh_Hans': '简体中文',
     'zh_CN': '中文大陆'
 }
+
+# MS Translator
+MS_TRANSLATOR_CLIENT_ID = 'mrhd_microblog'
+MS_TRANSLATOR_CLIENT_SECRET = '5xwnnvasqPLDVB5POOrFq3y4nAKHJSA2Q3/2/95qPIY='
 
 
