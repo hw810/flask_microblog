@@ -1,11 +1,11 @@
 <table class="table table-hover">
     <tr>
-        <td width="70"><a href="{{url_for('user', nickname = post.author.nickname)}}"><img src="{{post.author.avatar(70)}}" /></a></td>
-        <td>
+        <td class="span2"><a href="{{url_for('user', nickname = post.author.nickname)}}"><img src="{{post.author.avatar(70)}}" /></a></td>
+        <td calss="span7">
             {% autoescape false %}
             <p>{{ _( '%(nickname)s said %(when)s:', nickname = '<a href="%s">%s</a>' % (url_for('user', nickname=post.author.nickname), post.author.nickname), when=momentjs(post.timestamp).from_now()) }}</p>
             {% endautoescape %}
-            <p><strong><span id="post{{ post.id }}">{{post.body}} {{ post.language }} {{ g.locale }}</span></strong></p>
+            <p><strong><span id="post{{ post.id }}">{{post.body}}</span></strong></p>
             {% if post.language != None and post.language != '' and post.language != g.locale %}
             <div>
                 <span id="translation{{ post.id }}">
@@ -14,6 +14,11 @@
                 <img id="loading{{ post.id }}" style="display: none" src="/static/img/loading.gif">
             </div>
 
+            {% endif %}
+        </td>
+        <td class="span1">
+            {% if g.user.id == post.author.id %}
+            <span class="btn"><a href="{{ url_for('delete', id=post.id) }}">{{ _('Delete') }}</a></span>
             {% endif %}
         </td>
     </tr>

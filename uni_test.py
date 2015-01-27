@@ -8,6 +8,10 @@ from config import basedir
 from app import app, db
 from app.models import User, Post
 from app import translate
+from coverage import coverage
+
+cov = coverage(branch=True, omit=['~/.virtualenvs/flask/*', 'uni_test.py'])
+cov.start()
 
 
 class TestCase(unittest.TestCase):
@@ -27,8 +31,8 @@ class TestCase(unittest.TestCase):
         u = User(nickname='hd_test', email='hd_test@email.com')
         avatar = u.avatar(128)
         expected = 'http://www.gravatar.com/avatar/5e745829f005e13a1a79ae0bea3988db'
-        print avatar[0:len(expected)]
-        print expected
+        # print avatar[0:len(expected)]
+        # print expected
         assert avatar[0:len(expected)] == expected
 
     def test_make_unique_nickname(self):
@@ -119,8 +123,33 @@ class TestCase(unittest.TestCase):
 
     def test_ms_translator(self):
         t = translate.microsoft_translate(u'你好', 'zh', 'en')
-        print t
+
         assert t == u'How are you doing'
 
+    def test_delete_post(self):
+        # create a user and a post
+        u = User(nickname='john', email='john@example.com')
+        p = Post(body='test post', author=u, timestamp=datetime.utcnow())
+        db.session.add(u)
+        db.session.add(p)
+        db.session.commit()
+        # query the post and destroy the session
+        p = Post.query.get(1)
+        db.session.remove()
+        # delete the post using a new session
+        db.session = db.create_scoped_session()
+        db.session.delete(p)
+        db.session.commit()
+
 if __name__ == '__main__':
-    unittest.main()
+    try:
+        unittest.main()
+    except:
+        pass
+    cov.stop()
+    cov.save()
+    print '\n\nCoverage Report:\n'
+    cov.report()
+    print "HTML version: " + os.path.join(basedir, "tmp/coverage/index.html")
+    cov.html_report(directory='tmp/coverage')
+    cov.erase()

@@ -107,3 +107,11 @@ from momentjs import momentjs
 app.jinja_env.globals['momentjs'] = momentjs
 
 This just tells Jinja2 to expose our class as a global variable to all templates.
+* python debugger (pdb)
+
+bt -> backtrace
+
+* regression test
+For many, the most logical thing to do at this point would be to fix the Flask-WhooshAlchemy code and move on. But if we just do that, then what protects us from this or a similar bug happening in the future? For example, what happens if a year from now we decide to update Flask-WhooshAlchemy to a new version and forget that we had applied a custom fix to it?
+
+The best option every time a bug is discovered is to create a unit test for it, so that we can make sure we don't have a /regression/ in the future.
