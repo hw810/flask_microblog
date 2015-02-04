@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!flask/bin/python
 
 # use mysql
 os.environ['DATABASE_URL'] = 'mysql://apps:apps@localhost/apps'

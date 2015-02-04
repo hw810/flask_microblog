@@ -115,3 +115,60 @@ bt -> backtrace
 For many, the most logical thing to do at this point would be to fix the Flask-WhooshAlchemy code and move on. But if we just do that, then what protects us from this or a similar bug happening in the future? For example, what happens if a year from now we decide to update Flask-WhooshAlchemy to a new version and forget that we had applied a custom fix to it?
 
 The best option every time a bug is discovered is to create a unit test for it, so that we can make sure we don't have a /regression/ in the future.
+* pip install -r [requiremnet.txt]
+install all the package exported by 'pip freeze' 
+* start mysql service
+switch to mysql user
+
+service mysqld start
+* mysql
+- setup:
+mysql> mysql -u [username] -p [enter]
+mysql> show databases
+mysql> create database apps character set utf8 collate utf8_bin;
+mysql> create user 'apps'@'localhost' identified by 'apps';
+mysql> grant all privileges on apps.* to 'apps'@'localhost';
+mysql> flush privileges;
+mysql> quit;
+
+- useful command
+drop database [database name]
+drop user [user@localhost]
+* set password for user
+passwd username
+From man 1 passwd
+* switch user
+sudo su -[username]
+* linux user management
+To list all users you can use:
+
+cut -d: -f1 /etc/passwd
+To add a new user you can use:
+
+sudo adduser new_username
+or:
+
+sudo useradd new_username
+See also: What is the difference between adduser and useradd?
+
+To remove/delete a user, first you can use:
+
+sudo userdel username
+Then you may want to delete the home directory for the deleted user account :
+
+sudo rm -r /home/username
+(Please use with caution the above command!)
+
+To modify the username of a user:
+
+usermod -l new_username old_username
+To change the password for a user:
+
+sudo passwd username
+To change the shell for a user:
+
+sudo chsh username
+To change the details for a user (for example real name):
+
+sudo chfn username
+And, of course, see also: man adduser, man useradd, man userdel... and so on.
