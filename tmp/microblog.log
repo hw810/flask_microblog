@@ -1,0 +1,212 @@
+2015-01-10 15:32:23,787 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:45]
+2015-01-10 15:32:24,161 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:45]
+2015-01-10 15:33:12,574 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:45]
+2015-01-10 15:33:12,920 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:45]
+2015-01-10 15:34:04,245 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:45]
+2015-01-10 15:34:12,033 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:45]
+2015-01-10 15:34:29,286 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:45]
+2015-01-10 15:34:29,625 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:45]
+2015-01-10 16:29:12,687 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:45]
+2015-01-10 16:29:13,025 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:45]
+2015-01-13 00:16:04,184 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:45]
+2015-01-13 00:16:04,532 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:45]
+2015-01-13 00:17:49,040 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:45]
+2015-01-13 00:18:22,764 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:45]
+2015-01-17 20:09:54,852 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-17 20:09:55,188 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-17 20:23:02,397 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-17 20:23:02,721 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-17 20:25:33,679 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-17 21:22:00,057 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-17 21:24:40,184 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 00:48:17,418 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 00:48:17,765 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 00:52:35,968 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 00:54:54,814 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 00:55:35,649 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 00:56:09,398 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 01:01:23,163 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 01:01:54,897 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 01:04:40,027 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 01:05:22,883 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 01:05:36,378 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 01:06:24,264 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 01:16:20,133 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 01:18:35,917 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 01:18:43,367 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 14:40:50,465 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 14:55:24,028 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 14:55:24,590 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 15:47:28,524 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 15:50:50,274 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 15:50:50,870 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 16:16:22,702 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 16:16:56,501 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 16:23:32,017 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 16:38:53,210 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 16:40:21,833 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 16:42:24,565 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 16:43:03,649 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 16:44:31,184 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 16:54:25,893 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 16:55:38,249 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 16:57:58,062 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 17:00:20,121 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 17:04:03,561 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 17:10:56,989 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 17:15:48,757 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 17:16:41,328 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 17:20:26,142 INFO: microblog startup [in app/__init__.py:48]
+2015-01-18 23:46:56,441 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 23:46:57,003 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 23:49:56,524 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 23:51:08,864 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 23:51:45,807 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 23:56:00,403 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-18 23:56:01,027 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-19 00:04:59,375 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-19 00:19:59,170 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-19 00:20:54,453 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-19 00:21:24,564 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-21 23:28:56,315 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-21 23:28:56,889 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-21 23:36:34,613 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-01-22 00:00:15,802 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-22 00:00:16,343 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-22 00:00:45,895 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 16:35:18,463 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 16:35:26,198 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 16:42:29,420 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 16:42:35,541 ERROR: Exception on /index [GET] [in /Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/hd/Dropbox/project/Flask/microblog/app/views.py", line 36, in index
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)
+AttributeError: '_QueryProxy' object has no attribute 'paginate'
+2015-01-25 16:43:07,678 ERROR: Exception on / [GET] [in /Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/hd/Dropbox/project/Flask/microblog/app/views.py", line 36, in index
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)
+AttributeError: '_QueryProxy' object has no attribute 'paginate'
+2015-01-25 16:43:56,090 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 16:45:05,866 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 16:45:18,335 ERROR: Exception on /index [GET] [in /Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/hd/Dropbox/project/Flask/microblog/app/views.py", line 36, in index
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)
+AttributeError: '_QueryProxy' object has no attribute 'paginate'
+2015-01-25 16:50:20,525 ERROR: Exception on /index [GET] [in /Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/hd/Dropbox/project/Flask/microblog/app/views.py", line 36, in index
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)
+AttributeError: '_QueryProxy' object has no attribute 'paginate'
+2015-01-25 16:52:19,168 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 16:59:29,560 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 16:59:32,356 ERROR: Exception on /index [GET] [in /Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/hd/.virtualenvs/flask/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/hd/Dropbox/project/Flask/microblog/app/views.py", line 36, in index
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)
+AttributeError: '_QueryProxy' object has no attribute 'paginate'
+2015-01-25 16:59:57,596 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 16:59:58,176 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 17:42:18,285 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 17:43:50,341 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 17:44:07,633 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 17:47:12,888 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 17:50:55,380 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 17:52:33,054 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 17:53:00,038 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 17:53:41,702 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 17:54:25,154 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 17:55:38,338 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 17:56:22,148 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-25 17:57:09,191 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-26 22:05:40,310 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-26 22:05:40,860 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-26 22:14:58,202 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-26 22:16:31,872 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-26 22:17:40,429 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-26 22:19:52,565 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-26 22:36:10,326 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-26 22:36:10,872 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-27 00:34:01,996 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-27 00:42:02,946 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-27 00:42:03,488 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-27 00:45:34,894 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-01-27 00:45:35,443 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-02-03 23:20:52,068 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-02-03 23:20:52,601 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-02-03 23:25:33,360 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-02-03 23:25:33,953 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-02-03 23:25:58,629 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-02-03 23:26:06,853 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-02-03 23:26:07,383 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-02-03 23:30:44,260 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-02-03 23:30:44,832 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-02-03 23:30:59,565 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-02-04 00:03:03,077 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-02-04 00:03:03,707 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-02-04 00:06:06,681 INFO: microblog startup [in /Users/hd/Dropbox/Project/Flask/microblog/app/__init__.py:48]
+2015-02-04 23:03:47,830 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-02-04 23:03:48,359 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-02-04 23:06:57,699 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]
+2015-02-04 23:06:58,243 INFO: microblog startup [in /Users/hd/Dropbox/project/Flask/microblog/app/__init__.py:48]

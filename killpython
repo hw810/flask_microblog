@@ -1,1 +1,1 @@
-killall /usr/bin/env python
+killall flask/bin/python
